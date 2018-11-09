@@ -12,7 +12,7 @@ while programRunning:
     
 
     if second == 'list':
-        while x < 61:
+        while x < 60:
             if x%4 == 0:
                 print(x,'MAKO')
             elif x%4 == 1:

@@ -1,0 +1,15 @@
+This program is designed to figure out what the password is on Floor 63 in Shinra HQ in Final Fantasy VII. It can be figured out by looking at what the in-game second is right before you enter the floor. 
+
+Note that all passwords in this program will look like 'PASSWORD' (X), where PASSWORD is the password, and x is the position in the password menu in the game. With the in-game second known, while using this program you can do the following:
+
+1. Type the in-game second.
+
+	This will return the password. 
+
+2. Type the command 'list'.
+	
+	This will print out a list of all the possible in-game seconds with their respective passwords. Use this if you'd rather look at a list instead of typing in a number.
+
+3. Type the command 'quit'.
+
+	This will quit the program.

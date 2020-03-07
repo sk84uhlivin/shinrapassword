@@ -1,16 +1,14 @@
-#!/usr/bin/python3
-
-programRunning = True
+#!/usr/bin/env python3
 
 passwords = ["MAKO (5)", "KING (2)", "BEST (1)", "BOMB (4)"]
 
-commands = ["list", "quit"]
+commands = ["list", "quit", "l", "q"]
 
 def passList():
     print()
     for x in range(20):
         print(
-            "{:<02d} {} | {:<02d} {} | {:<02d} {}".format(
+            "{:02d} {} | {:<02d} {} | {:<02d} {}".format(
                 x,
                 passwords[x % 4],
                 x + 20,
@@ -19,11 +17,12 @@ def passList():
                 passwords[(x + 40) % 4],
             )
         )
-while programRunning:              
+while True:              
     print()
-    cmd = input("Type the in-game second, 'list' or 'quit'. ").lower()
+    cmd = input("Type the in-game second, '(l)ist' or '(q)uit'. ").lower()
+
     try:
-        cmd = int(cmd) % 4
+        modulo = int(cmd) % 4
 
     except ValueError:
         if cmd not in commands:
@@ -31,15 +30,15 @@ while programRunning:
             print('Invalid command.')
             continue
 
-    if cmd == 'list':
+    if cmd in ('list', 'l'):
         passList()
 
-    elif cmd == 'quit':
-        programRunning = False
+    elif cmd in ('quit', 'q'):
+        print()
         break 
 
     else:
         print()
-        print("The password is {}".format(passwords[cmd]) + ".")
+        print(f"The password is {passwords[modulo]}.")
 
     
